@@ -31,6 +31,8 @@ export default {};
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../assets/sass/style.scss";
+
 .main {
   width: 818px;
   height: 216px;
@@ -52,11 +54,34 @@ export default {};
         list-style-type: none;
         display: flex;
         flex-flow: column;
-        gap: 20px;
+        gap: 17px;
 
         li {
           display: flex;
-          gap: 10px;
+          font-weight: 700;
+          align-items: center;
+
+          label {
+            margin-top: 3px;
+            font-size: $font-size-big;
+          }
+
+          input[type="radio"] {
+            appearance: none;
+            background: $ibis-grey-middle;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+          }
+          input[type="radio"]:not(:checked) + label {
+            color: #888;
+          }
+
+          input[type="radio"]:checked {
+            background-color: $ibis-red;
+            border-color: $ibis-red;
+          }
         }
       }
     }

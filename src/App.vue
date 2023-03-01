@@ -4,7 +4,6 @@
 
 <script>
 
-import "./assets/sass/style.scss"
 import ProductConfigurator from './components/ProductConfigurator.vue'
 
 export default {
@@ -15,9 +14,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "./assets/sass/style.scss";
+
 #app {
   font-family: 'Raleway';
+  color: $ibis-black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
