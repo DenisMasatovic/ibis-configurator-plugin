@@ -26,7 +26,19 @@
 </template>
 
 <script>
-export default {};
+const firebaseHandler = require("@/utility/FirebaseHandler.js");
+export default {
+
+  mounted(){
+    this.fetchAllProducts();
+  },
+
+  methods: {
+    fetchAllProducts() {
+      console.log(firebaseHandler.getAllProducts());
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
