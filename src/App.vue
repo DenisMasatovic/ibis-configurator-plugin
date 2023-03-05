@@ -4,7 +4,7 @@
 
 <script>
 
-import ProductConfigurator from './components/ProductConfigurator.vue'
+import ProductConfigurator from './components/configurator/ProductConfigurator.vue'
 
 export default {
   name: 'App',
