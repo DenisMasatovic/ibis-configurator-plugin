@@ -4,7 +4,7 @@
       <div class="optionList">
         <ul>
           <li>
-            <input type="radio" id="option1" name="options" value="option1" />
+            <input type="radio" id="option1" name="options" value="option1" checked="true"/>
             <label for="option1">Stange</label>
           </li>
           <li>
@@ -34,8 +34,8 @@ export default {
   },
 
   methods: {
-    fetchAllProducts() {
-      console.log(firebaseHandler.getAllProducts());
+    async fetchAllProducts() {
+      console.log(await firebaseHandler.getAllProducts());
     },
   },
 };
@@ -87,7 +87,7 @@ export default {
             margin-right: 10px;
           }
           input[type="radio"]:not(:checked) + label {
-            color: #888;
+            color: $ibis-grey-middle;;
           }
 
           input[type="radio"]:checked {
