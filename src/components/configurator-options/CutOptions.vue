@@ -1,6 +1,6 @@
 <template>
   <div class="optionsWrapper">
-    <q-btn-dropdown color="primary" label="Dropdown Button">
+    <q-btn-dropdown color="primary" label="Falzmaß (cm)" no-caps dropdown-icon="expand_more">
       <q-list>
         <q-item clickable v-close-popup @click="onItemClick">
           <q-item-section>
@@ -29,11 +29,14 @@ export default {};
 <style scoped lang="scss">
 @import "../../assets/sass/style.scss";
 .optionsWrapper {
-    .q-btn:before{
-        box-shadow: none;
-    }
-    .text-white{
-        color: $ibis-black !important;
-    }
+  .q-btn:before {
+    box-shadow: none;
+    border: 2px solid $ibis-black;
+    border-radius: 50px;
+  }
+  .text-white {
+    color: $ibis-black !important;
+    font-size: 20px;
+  }
 }
 </style>
