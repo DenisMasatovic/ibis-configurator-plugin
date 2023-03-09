@@ -71,7 +71,7 @@ export default {
   margin: auto;
 
   .optionListWrapper {
-    width: 95%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -103,11 +103,13 @@ export default {
           }
           input[type="radio"]:not(:checked) + label {
             color: $ibis-grey-middle;
+            transition: 0.15s;
           }
 
           input[type="radio"]:checked {
             background-color: $ibis-red;
             border-color: $ibis-red;
+            transition: 0.15s;
           }
         }
       }
