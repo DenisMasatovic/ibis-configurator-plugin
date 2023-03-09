@@ -1,26 +1,12 @@
 <template>
   <div class="optionsWrapper">
-    <q-btn-dropdown color="primary" label="Falzmaß (cm)" no-caps dropdown-icon="expand_more">
-      <q-list>
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Photos</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Videos</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Articles</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-btn-dropdown>
+    <select id="falzmass-dropdown" name="falzmass-dropdown">
+      <option value="" selected disabled>Falzmaß (cm)</option>
+      <option value="60">60 cm</option>
+      <option value="80">80 cm</option>
+      <option value="100">100 cm</option>
+      <option value="120">120 cm</option>
+    </select>
   </div>
 </template>
 <script>
@@ -29,14 +15,32 @@ export default {};
 <style scoped lang="scss">
 @import "../../assets/sass/style.scss";
 .optionsWrapper {
-  .q-btn:before {
+  select {
+    padding: 10px;
     box-shadow: none;
     border: 2px solid $ibis-black;
     border-radius: 50px;
-  }
-  .text-white {
     color: $ibis-black !important;
     font-size: 20px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url("../../assets/icons/arrow_down.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 1.5em;
   }
+  select::-ms-expand {
+    display: none;
+  }
+  select::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+  }
+  select:focus {
+    outline: none;
+    border-color: $ibis-black; /* Optional: Set a custom border color */
+  }
+  /* Style the arrow */
 }
 </style>
